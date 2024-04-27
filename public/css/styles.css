@@ -37,7 +37,7 @@ body {
 
   #wrapper {
     /* This is the blueish border around the desktop version */
-    border: 5px solid var(--main-accent);
+    border: 5px solid #01b0d3;
     border-radius: 10px;
     margin-top: 1rem;
     padding: 1vw;
