@@ -21,6 +21,94 @@ body {
   padding-bottom: 1em;
 }
 
+/* *************************************************** */
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#top-header a {
+  text-decoration: none;
+}
+
+/* *************************************************** */
+
+nav ul {
+  display: flex;
+  padding: 0;
+  background-color: #e6ab02;
+}
+
+nav li {
+  flex-grow: 1;
+  text-align: center;
+  list-style: none; /* Remove bullet-points */
+  padding: 10px;
+  color: black;
+}
+
+/* *************************************************** */
+
+button {
+  background-color: #e6ab02;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+/* *************************************************** */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upgrade-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.upgrade-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.upgrade-box {
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
+.upgrade-title {
+  display: flex;
+  margin-top: 5px;
+  text-align: 0 10px 20px;
+}
+
+.reviews-section {
+  padding: 10px;
+  margin: 10px;
+}
+
+.reviews-list li{
+  padding: 5px;
+  margin: 5px;
+}
+
+/* *************************************************** */
+
 @media only screen and (min-width: 768px) {
   body {
     background-image: linear-gradient(45deg, #000 25%, transparent 25%),
