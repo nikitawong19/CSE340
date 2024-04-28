@@ -91,12 +91,6 @@ button:hover {
   border: 1px solid #000;
 }
 
-.upgrade-title {
-  display: flex;
-  margin-top: 5px;
-  text-align: 0 10px 20px;
-}
-
 .reviews-section {
   padding: 10px;
   margin: 10px;
