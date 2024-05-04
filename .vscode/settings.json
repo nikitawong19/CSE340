@@ -3,15 +3,14 @@
         {
             "pgOptions": {
                 "ssl": {
-                    "rejectUnauthorized": true,
-                    "passphrase": "Q3AKzbkMhlzBbXHqkCwSgqMA4zVR2L35"
+                    "rejectUnauthorized": true
                 }
             },
             "previewLimit": 50,
             "server": "localhost",
             "driver": "PostgreSQL",
-            "connectString": "postgres://cse340:Q3AKzbkMhlzBbXHqkCwSgqMA4zVR2L35@dpg-cop374ol5elc739865g0-a.singapore-postgres.render.com/cse340_lfgn",
-            "name": "Render.com"
+            "name": "Render.com",
+            "connectString": "postgres://cse340_byu:dyagUJlIPzwHnemZ0XQbSnzf0Le2V6JV@dpg-cor5jfvsc6pc73djmpkg-a.singapore-postgres.render.com/cse340_byu_sjz5"
         }
     ]
 }
