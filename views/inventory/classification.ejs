@@ -1,0 +1,19 @@
+<!-- This EJS code checks if a title is provided. If so, it displays the title in a header tag. If not, it redirects the user to the homepage of the website. -->
+
+<!-- This line checks if the variable title exists -->
+<% if (title) { %>
+<!-- If title exists, it renders an <h1> HTML element with the content of title. -->
+<h1><%= title %></h1>
+<!-- If title does not exist, the else block is executed. -->
+<% } else {
+    <!-- Inside the else block, it redirects the user to the root URL ('/') of the application. -->
+    res.redirect('/')
+<!-- This closes the if-else statement. -->
+} %>
+
+<!-- This a function that would normally be called to display messages (perhaps flash messages for alerts, errors, or notifications), but because it’s inside a comment, it won’t be called or displayed. 
+If you want to execute the messages() function and display its output, you should remove the # symbol. -->
+<!-- <%# messages() %> -->
+
+<!-- An EJS code block with an "unescaped" indicator —. This allows HTML to be displayed. Remember our grid variable contains HTML. -->
+<%- grid %>
