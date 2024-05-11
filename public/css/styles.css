@@ -104,6 +104,48 @@ button:hover {
 
 /* *************************************************** */
 
+#inv-display {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between the vehicle boxes */
+  max-width: 1200px;
+  text-align: center;
+}
+
+#inv-display li {
+  background-color: #fff;
+  border: 1px solid black;
+  margin-bottom: 10px; /* Space between items */
+  padding: 20px;
+  min-width: 300px; /* Minimum width of each vehicle box */
+  flex: 1;
+}
+
+.namePrice {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.namePrice span {
+  font-weight: bold;
+  color: #e44d26;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* *************************************************** */
+
 @media only screen and (min-width: 768px) {
   body {
     background-image: linear-gradient(45deg, #000 25%, transparent 25%),
