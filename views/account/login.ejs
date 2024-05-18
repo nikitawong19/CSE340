@@ -1,0 +1,30 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %> | CSE 340 App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/site/icon.png" type="image/x-icon"/>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Login</h1>
+        <!-- Flash message display -->
+        <div class="flash-message">Flash message goes here
+            <% if (messages && messages.notice) { %>
+                <% messages.notice.forEach(function(message) { %>
+                  <div class="alert alert-success"><%= message %></div>
+                <% }); %>
+            <% } %>
+        </div>
+        <form action="/login" method="post">
+            <input type="email" name="account_email" placeholder="Email Address" required>
+            <input type="password" name="account_password" placeholder="Password" required>
+            <button type="submit">LOGIN</button>
+        </form>
+        <div class="register-link">
+            <a href="/account/register">No account? Sign-up.</a>
+        </div>
+    </div>
+</body>
