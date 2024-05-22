@@ -1,0 +1,22 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %> | CSE 340 App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/site/icon.png" type="image/x-icon"/>
+</head>
+
+
+<body>
+    <h1>Add New Classification</h1>
+    <% if (typeof message !== 'undefined') { %>
+        <p><%= message %></p>
+    <% } %>
+    <form action="/inv/add-classification" method="POST">
+        <label for="classificationName">Classification Name:</label>
+        <input type="text" id="classificationName" name="classification_name" required pattern="[A-Za-z0-9]+">
+        <div><i>Cannot contain spaces or special characters.</i></div>
+        <button type="submit">Add Classification</button>
+    </form>
+</body>

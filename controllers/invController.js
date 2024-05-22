@@ -21,4 +21,49 @@ invCont.buildByClassificationId = async function (req, res, next) {
   })
 }
 
+invCont.renderManagementView = async function (req, res, next) {
+  try {
+    let nav = await utilities.getNav(); 
+
+    // Render the management view with the nav and flash message
+    res.render('inventory/management', {
+      title: 'Inventory Management',
+      h1: 'Inventory Management',
+      nav,
+      message: req.flash('message')
+    });
+  } catch (error) {
+    console.error("Error rendering management view:", error);
+    next(error); // Pass the error to the next middleware/handler
+  }
+};
+
+invCont.renderAddClassificationView = async function (req, res, next) {
+  try {
+    let nav = await utilities.getNav(); 
+    res.render('./inventory/add-classification', {
+      title: 'Add Classification',
+      h1: 'Add Classification',
+      nav,
+      message: req.flash('message')
+    });
+  } catch (error) {
+    console.error("Error rendering management view:", error);
+    next(error); // Pass the error to the next middleware/handler
+  }
+};
+
+invCont.addClassification = async function (req, res, next) {
+  const { classificationName } = req.body;
+  try {
+    await invModel.insertClassification(classificationName);
+    req.flash('success', 'Classification added successfully.');
+    res.redirect('inv/');
+  } catch (error) {
+    req.flash('fail', 'Failed to add classification.');
+    res.redirect('inv/add-classification');
+    next(error); // Pass the error to the next middleware/handler
+  }
+};
+
 module.exports = invCont
