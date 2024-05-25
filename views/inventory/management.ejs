@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/site/icon.png" type="image/x-icon"/>
 </head>
-
 <body>
-    <body>
-        <h1>Inventory Management</h1>
+  <div class="management-container">
+      <h1>Inventory Management</h1>
+      <div class="flash-message">
         <% if (typeof message !== 'undefined') { %>
-          <p><%= message %></p>
+            <p><%= message %></p>
         <% } %>
-        <ul>
-          <li><a href="/inv/add-classification">Add New Classification</a></li>
-          <li><a href="/inv/add-inventory">Add New Inventory</a></li>
-        </ul>
-      </body>
+      </div>
+      <div class="management-links">
+          <a href="/inv/add-classification">Add New Classification</a>
+          <a href="/inv/add-inventory">Add New Inventory</a>
+      </div>
+  </div>
 </body>
