@@ -1,0 +1,21 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- title %> | CSE 340 App</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/images/site/icon.png" type="image/x-icon"/>
+</head>
+<body>
+  <% results.forEach(result => { %>
+    <div>
+      <h2><%= result.inv_make %> <%= result.inv_model %></h2>
+      <p>Year: <%= result.inv_year %></p>
+      <p>Description: <%= result.inv_description %></p>
+      <p>Price: $<%= result.inv_price %></p>
+      <p>Miles: <%= result.inv_miles %></p>
+      <p>Color: <%= result.inv_color %></p>
+      <img src="<%= result.inv_thumbnail %>" alt="<%= result.inv_make %> <%= result.inv_model %>">
+    </div>
+  <% }) %>
+</body>

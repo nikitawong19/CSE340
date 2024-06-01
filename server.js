@@ -17,6 +17,7 @@ const session = require("express-session")
 const pool = require("./database/")
 const accountRoute = require("./routes/accountRoute")
 const bodyParser = require("body-parser")
+const searchRoute = require('./routes/searchRoute')
 
 /* ***********************
  * View Engine and Templates
@@ -45,7 +46,6 @@ app.use(function(req, res, next){
 app.set("view engine", "ejs")
 app.use(expressLayouts)
 app.set("layout", "./layouts/layout") // not at views root
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
@@ -62,6 +62,8 @@ app.use("/inv", require("./routes/inventoryRoute"));
 
 // Account routes
 app.use("/account", require("./routes/accountRoute")) // Means if server saw route contain "account", it'll be forwarded to account router file for handling
+
+app.use(searchRoute)
 
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
